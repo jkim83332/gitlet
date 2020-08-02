@@ -1,0 +1,39 @@
+Gitlet Design Document
+----------------------
+
+
+Classes and Data Structures
+---------------------------
+**** Commits ****
+
+This class stores commits snapshot
+
+** Fields **
+
+1. HashMap<Integer, Integer> forward: A map representing the permute mapping.
+2. HashMap<Integer, Integer> backward: A map representing the inverse mapping.
+
+**** Blob ****
+
+The class stores blobs
+
+** Fields **
+
+1. Permutation perm: Save permutation object to determine conversions.
+2. int setting: Keeps track of what position the rotor is at.
+
+**** Command ****
+
+Class stores Commands
+
+** Fields **
+
+1. Rotor[] allRotors: An array representing all rotors of this machine can use.
+
+
+Algorithms
+----------
+
+
+Persistence
+-----------

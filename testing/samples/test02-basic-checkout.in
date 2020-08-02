@@ -1,0 +1,12 @@
+> init
+<<<
++ f.txt finally.txt
+> add f.txt
+<<<
+> commit "added wug"
+<<<
++ f.txt nonono.txt
+# Must change
+> checkout -- f.txt
+<<<
+= wug.txt finally.txt

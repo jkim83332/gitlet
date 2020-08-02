@@ -1,0 +1,31 @@
+> init
+<<<
++ xx.txt testtest.txt
+> add xx.txt
+<<<
+> commit "add xx.txt"
+<<<
+> rm a.txt
+<<<
+> commit "remove xx.txt"
+<<<
+D UID "[a-f0-9]+"
+D HEADER "commit (${UID})"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+# Don't change anything above. These basically pattern match the expected output, and then captures each.
+> log
+===
+${HEADER}
+${DATE}
+remove xx.txt
+
+===
+${HEADER}
+${DATE}
+add xx.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+<<<*
